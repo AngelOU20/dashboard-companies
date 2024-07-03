@@ -43,7 +43,3 @@ Dashboard Companies es una aplicación web desarrollada con Next.js 14, Tailwind
 ## Contribución
 
 Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request.
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
