@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import React from "react";
 
 type LayoutProps = {
@@ -6,7 +7,8 @@ type LayoutProps = {
 
 const AuthLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="h-full flex items-center justify-center bg-sky-700">
+    <div className="h-full flex flex-col items-center justify-center">
+      <Logo />
       {children}
     </div>
   );
