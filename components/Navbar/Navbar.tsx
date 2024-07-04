@@ -7,7 +7,7 @@ import { ModeToggle } from "@/components/ToogleTheme";
 
 export const Navbar = () => {
   return (
-    <div className="flex justify-between items-center px-2 gap-x-4 md:px-6 w-full h-20 bg-background border-b">
+    <nav className="flex justify-between items-center px-2 gap-x-4 md:px-6 w-full h-20 bg-background border-b">
       <div className="block lg:hidden">
         <Sheet>
           <SheetTrigger className="flex items-center">
@@ -26,6 +26,6 @@ export const Navbar = () => {
         <ModeToggle />
         <UserButton />
       </div>
-    </div>
+    </nav>
   );
 };
