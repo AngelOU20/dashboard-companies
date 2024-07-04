@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_Display } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeProvider } from "@/providers/theme-provider";
 import "./globals.css";
 
 const notoSans = Noto_Sans_Display({ subsets: ["latin"] });
@@ -18,7 +19,16 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={notoSans.className}>{children}</body>
+        <body className={notoSans.className}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
       </html>
     </ClerkProvider>
   );
