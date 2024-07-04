@@ -8,7 +8,7 @@ export const Logo = () => {
 
   return (
     <div
-      className="min-h-20 flex items-center px-6 border-r cursor-pointer gap-2"
+      className="min-h-20 flex items-center px-6 cursor-pointer gap-2"
       onClick={() => router.push("/")}
     >
       <Image src={"/logo.svg"} alt="logo" width={30} height={30} priority />
