@@ -1,6 +1,8 @@
 import React from "react";
-import { CardSummary } from "./components/CardSummary";
 import { BookOpenCheck, UserRound, Waypoints } from "lucide-react";
+import { CardSummary } from "./components/CardSummary";
+import { LastCustomers } from "./components/LastCustomers";
+import { SalesDistributor } from "./components/SalesDistributor";
 
 export const dataCardSummary = [
   {
@@ -42,6 +44,10 @@ export default function Home() {
             />
           </React.Fragment>
         ))}
+      </div>
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-2 md:gap-x-10 mt-12">
+        <LastCustomers />
+        <SalesDistributor />
       </div>
     </section>
   );
