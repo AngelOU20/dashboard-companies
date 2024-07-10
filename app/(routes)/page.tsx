@@ -4,6 +4,7 @@ import { CardSummary } from "./components/CardSummary";
 import { LastCustomers } from "./components/LastCustomers";
 import { SalesDistributor } from "./components/SalesDistributor";
 import { TotalSuscribers } from "./components/TotalSuscribers";
+import { ListIntegrations } from "./components/ListIntegrations";
 
 export const dataCardSummary = [
   {
@@ -46,14 +47,15 @@ export default function Home() {
           </React.Fragment>
         ))}
       </div>
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-2 md:gap-x-10 mt-12">
+
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 md:gap-x-10 mt-12">
         <LastCustomers />
         <SalesDistributor />
       </div>
 
-      <div className="flex flex-wrap gap-y-4 md:gap-y-0 mt-12 md:mb-10 justify-between">
+      <div className="flex flex-wrap gap-y-4 md:gap-y-0 mt-12 md:mb-10 md:gap-x-10 justify-between">
         <TotalSuscribers />
-        <p>list integrations</p>
+        <ListIntegrations />
       </div>
     </section>
   );
