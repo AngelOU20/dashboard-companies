@@ -14,7 +14,7 @@ const Dashboardlayout: React.FC<LayoutProps> = ({ children }) => {
       </div>
       <div className="w-full lg:ml-80">
         <Navbar />
-        <div className="p-6 bg-[#fafbfc] dark:bg-secondary">{children}</div>
+        <div className="p-6 bg-[#fafbfc] dark:bg-[#050a1a]/90">{children}</div>
       </div>
     </div>
   );
