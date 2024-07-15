@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import React, { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -25,6 +26,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
@@ -38,6 +40,7 @@ const formSchema = z.object({
 export const FormCreateCustomer: React.FC<FormCreateCustomerProps> = ({
   setIsCreateModalOpen,
 }) => {
+  const router = useRouter();
   const [isPhotoUploaded, setIsPhotoUploaded] = useState(false);
 
   // 1. Define your form.
@@ -57,7 +60,17 @@ export const FormCreateCustomer: React.FC<FormCreateCustomerProps> = ({
 
   // 2. Define a submit handler.
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+    try {
+      axios.post("/api/company", values);
+      toast({ title: "Company created!" });
+      router.refresh();
+      setIsCreateModalOpen(false);
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
