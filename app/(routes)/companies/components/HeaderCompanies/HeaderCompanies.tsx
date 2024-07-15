@@ -32,7 +32,7 @@ export const HeaderCompanies = () => {
             </DialogDescription>
           </DialogHeader>
 
-          <FormCreateCustomer />
+          <FormCreateCustomer setIsCreateModalOpen={setIsCreateModalOpen} />
         </DialogContent>
       </Dialog>
     </div>
