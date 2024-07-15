@@ -129,7 +129,7 @@ export const FormCreateCustomer: React.FC<FormCreateCustomerProps> = ({
         <div className="grid grid-cols-2 gap-3">
           <FormField
             control={form.control}
-            name="website"
+            name="phone"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Phone</FormLabel>
@@ -172,6 +172,7 @@ export const FormCreateCustomer: React.FC<FormCreateCustomerProps> = ({
                 ) : (
                   <UploadButton
                     className="bg-slate-400/20 text-slate-800 rounded-lg outline outline-2 border-2"
+                    {...field}
                     endpoint="profileImage"
                     onClientUploadComplete={(res) => {
                       form.setValue("profileImage", res?.[0].url);
@@ -192,7 +193,9 @@ export const FormCreateCustomer: React.FC<FormCreateCustomerProps> = ({
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" disabled={!isValid}>
+          Submit
+        </Button>
       </form>
     </Form>
   );
