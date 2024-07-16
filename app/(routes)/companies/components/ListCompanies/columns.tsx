@@ -27,7 +27,7 @@ export const columns: ColumnDef<Company>[] = [
             alt="logo company"
             width={40}
             height={40}
-            className="h-auto w-auto"
+            className="h-10 w-10"
           />
         </div>
       );
