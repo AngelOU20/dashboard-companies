@@ -61,7 +61,7 @@ export const FormCreateCustomer: React.FC<FormCreateCustomerProps> = ({
   // 2. Define a submit handler.
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      axios.post("/api/company", values);
+      await axios.post("/api/company", values);
       toast({ title: "Company created!" });
       router.refresh();
       setIsCreateModalOpen(false);
