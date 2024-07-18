@@ -3,6 +3,7 @@ import Image from "next/image";
 import { CompanyInformationProps } from "./CompanyInformation.type";
 import { User } from "lucide-react";
 import { CompanyForm } from "../CompanyForm";
+import { NewContact } from "../NewContact";
 
 export const CompanyInformation: React.FC<CompanyInformationProps> = ({
   company,
@@ -30,7 +31,7 @@ export const CompanyInformation: React.FC<CompanyInformationProps> = ({
             Contacts
           </div>
           <div>
-            <p>New contact</p>
+            <NewContact />
           </div>
         </div>
 
