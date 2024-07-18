@@ -4,6 +4,7 @@ import { CompanyInformationProps } from "./CompanyInformation.type";
 import { User } from "lucide-react";
 import { CompanyForm } from "../CompanyForm";
 import { NewContact } from "../NewContact";
+import { ListContacts } from "../ListContacts";
 
 export const CompanyInformation: React.FC<CompanyInformationProps> = ({
   company,
@@ -24,7 +25,7 @@ export const CompanyInformation: React.FC<CompanyInformationProps> = ({
         </div>
       </div>
 
-      <div className="p-4 rounded-lg shadow-md bg-background hover:shadow-lg h-min">
+      <div className="p-4 rounded-lg shadow-md bg-background hover:shadow-lg h-min flex flex-col gap-y-8">
         <div className="flex items-center justify-between gap-x-2">
           <div className="flex items-center gap-x-2">
             <User className="w-5 h-5" />
@@ -35,7 +36,7 @@ export const CompanyInformation: React.FC<CompanyInformationProps> = ({
           </div>
         </div>
 
-        <p>List contacts</p>
+        <ListContacts company={company} />
       </div>
     </div>
   );
