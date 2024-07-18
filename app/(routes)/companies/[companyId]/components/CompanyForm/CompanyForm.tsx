@@ -14,7 +14,6 @@ import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -228,7 +227,7 @@ export const CompanyForm: React.FC<CompanyFormProps> = ({ company }) => {
               </FormItem>
             )}
           />
-          <Button type="submit">Submit</Button>
+          <Button type="submit">Edit company</Button>
         </form>
       </Form>
     </>
