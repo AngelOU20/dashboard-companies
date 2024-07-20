@@ -59,9 +59,9 @@ model Event {
   companyId String? @db.Text
 
   title String
-  start String
+  start DateTime
   allDay Boolean
-  TimeFormat String
+  timeFormat String
 
   company Company? @relation(fields: [companyId], references: [id])
 
