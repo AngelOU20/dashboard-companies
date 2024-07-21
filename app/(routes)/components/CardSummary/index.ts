@@ -1,1 +1,1 @@
-export { default as CardSummary } from './CardSummary';
+export * from './CardSummary';

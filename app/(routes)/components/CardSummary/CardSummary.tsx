@@ -4,7 +4,7 @@ import { CustomTooltip } from "@/components/CustomTooltip/CustomTooltip";
 import { cn } from "@/lib/utils";
 import { MoveDownRight, MoveUpLeft, TrendingUp } from "lucide-react";
 
-const CardSummary: React.FC<CardSummaryProps> = ({
+export const CardSummary: React.FC<CardSummaryProps> = ({
   icon: Icon,
   total,
   average,
@@ -40,5 +40,3 @@ const CardSummary: React.FC<CardSummaryProps> = ({
     </div>
   );
 };
-
-export default CardSummary;
