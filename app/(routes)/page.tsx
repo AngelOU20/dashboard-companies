@@ -1,34 +1,10 @@
 import React from "react";
-import { BookOpenCheck, UserRound, Waypoints } from "lucide-react";
-import { CardSummary } from "./components/CardSummary";
 import { LastCustomers } from "./components/LastCustomers";
 import { SalesDistributor } from "./components/SalesDistributor";
 import { TotalSuscribers } from "./components/TotalSuscribers";
 import { ListIntegrations } from "./components/ListIntegrations";
-
-export const dataCardSummary = [
-  {
-    icon: UserRound,
-    total: "12.450",
-    average: 15,
-    title: "Companies created",
-    tooltipText: "See all of the companies created",
-  },
-  {
-    icon: Waypoints,
-    total: "86.5%",
-    average: 80,
-    title: "Total Revenue",
-    tooltipText: "See all of the summary",
-  },
-  {
-    icon: BookOpenCheck,
-    total: "$363,95",
-    average: 30,
-    title: "Bounce Rate",
-    tooltipText: "See all of the bounce rate",
-  },
-];
+import { CardSummary } from "./components/CardSummary";
+import { dataCardSummary } from "./components/CardSummary/CardSummary.data";
 
 export default function Home() {
   return (
