@@ -104,7 +104,7 @@ export const Calendar: React.FC<CalendarProps> = ({ companies, events }) => {
             <p className="mb-3 text-xl">Listado de tareas</p>
             {events.map((currentEvent) => (
               <React.Fragment key={currentEvent.id}>
-                <div className="p-4 mb-2 rounded-lg shadow-sm bg-slate-100">
+                <div className="p-4 mb-2 rounded-lg shadow-sm bg-slate-100 dark:bg-background">
                   <p className="font-bold">{currentEvent.title}</p>
                   <p>{formatDate(currentEvent.start)}</p>
                 </div>
