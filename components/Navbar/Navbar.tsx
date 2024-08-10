@@ -24,7 +24,7 @@ export const Navbar = () => {
       </div>
       <div className="flex gap-x-2 md:gap-x-8 items-center">
         <ModeToggle />
-        <UserButton />
+        <UserButton afterSignOutUrl="/" />
       </div>
     </nav>
   );
