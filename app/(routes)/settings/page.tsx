@@ -13,8 +13,8 @@ export default function SettingPage() {
             },
             card: {
               border: "1px solid #e5e5e5",
-              boxShadow: "none",
               width: "100%",
+              boxShadow: "none",
               // height: '80vh',
             },
           },
